@@ -49,17 +49,17 @@ body {/*inherited fonts and font-styles*/
     position: relative;/*makes child elemtents have it has a reference*/
 }
 
-.logo-box {
+.header__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem;
 }
 
-.logo {
+.header__logo {
     height: 3.5rem;
 }
 
-.text-box {
+.header__text-box {
     position: absolute;
     top: 40%;/*relation on parent*/
     left: 50%;/*relation on parent*/
@@ -74,7 +74,7 @@ body {/*inherited fonts and font-styles*/
     margin-bottom: 6rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -91,7 +91,7 @@ body {/*inherited fonts and font-styles*/
     */
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
@@ -165,7 +165,7 @@ body {/*inherited fonts and font-styles*/
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
 }
 
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: #777;
 }
@@ -183,7 +183,7 @@ body {/*inherited fonts and font-styles*/
     transition:  all .4s;
 }
 
-.btn-white::after {
+.btn--white::after {
     background-color: #fff;
 }
 
@@ -192,7 +192,7 @@ body {/*inherited fonts and font-styles*/
     opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
     animation: moveInBottom .5s ease-out .75s; /* name | duration | timing function | delay */
     animation-fill-mode: backwards; /* automatically apply the styles of the 0% before the animation starts */
 }
