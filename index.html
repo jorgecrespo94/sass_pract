@@ -11,20 +11,51 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
-    <title>Natours | Exciting tours for adventurous people</title>
+    <title>Disney | Exciting times</title>
 </head>
 <body>
     <header class="header">
         <div class="header__logo-box">
-            <img class="header__logo" src="img/logo-white.png" alt="Logo">
+            <img class="header__logo" src="img/walt-disney-company-white-logo.png" alt="Logo">
         </div>
         <div class="header__text-box">
             <h1 class="heading-primary">
-                <span class="heading-primary--main">OUTDOORS</span>
-                <span class="heading-primary--sub">is where life happens</span>
+                <span id="count-down" class="heading-primary--main"></span>
+                <span class="heading-primary--sub">Great times ahead! Still the best is yet to come!</span>
             </h1>
-            <a href="#" class="btn btn--white btn--animated">Discover our tours</a>
+            <a href="#"  class="btn btn--white btn--animated">July 13, 2023 8pm</a>
         </div>
     </header>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jul 13, 2023 16:00:00").getTime();
+        
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+          // Get today's date and time
+          var now = new Date().getTime();
+            
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+            
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+          // Output the result in an element with id="demo"
+          document.getElementById("count-down").innerHTML = days + "d " + hours + "h "
+          + minutes + "m " + seconds + "s ";
+            
+          // If the count down is over, write some text 
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+        </script>
 </body>
 </html>
